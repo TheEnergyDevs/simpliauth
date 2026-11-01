@@ -31,7 +31,8 @@ export const ACCENT_PRESETS = [
   { name: "Green", value: "#22c55e" },
 ];
 
-const TONES: Record<Tone, { light: string[]; dark: string[] }> = {
+type TonePalette = readonly [string, string, string, string];
+const TONES: Record<Tone, { light: TonePalette; dark: TonePalette }> = {
   // [background, card, secondary/muted, border]
   neutral: {
     light: ["oklch(0.985 0.002 264)", "oklch(1 0 0)", "oklch(0.955 0.003 264)", "oklch(0.905 0.005 264)"],
